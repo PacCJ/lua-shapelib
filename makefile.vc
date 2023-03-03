@@ -4,6 +4,9 @@ DLLNAME = lshapelib.dll
 
 all: $(DLLNAME)
 
+clean:
+	del $(OBJ)
+
 shapelib.obj: src/shapelib.c
 	$(CC) $(CFLAGS) /c src/shapelib.c
 

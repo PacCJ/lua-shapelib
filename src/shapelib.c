@@ -211,7 +211,7 @@ static luaL_Reg shapelib_shpm[] = {
     {"__index", shapelib_readobject},
     {"__newindex", shapelib_writeobject},
     {"__len", shapelib_len},
-    {0, 0} 
+    {0, 0}
 };
 
 __declspec(dllexport) int luaopen_lshapelib(lua_State *ls)
