@@ -7,3 +7,15 @@ The interface for shapefiles allows the shape handle to be indexed to retrieve o
 
 See the examples folder for usage.
 
+# Building
+
+## Windows
+
+Firstly, make a file called Tools.ini which should look something like the following:
+```
+[NMAKE]
+LUA_INCLUDE = C:\lua-5.1.5\include
+LUA_LIB = C:\lua-5.1.5\bin\lua51.lib
+```
+
+Then run `nmake /f makefile.vc` from the Visual Studio dev command prompt.

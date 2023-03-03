@@ -1,0 +1,11 @@
+CFLAGS = /nologo /Ox /MD /W4 /wd4100 /D_CRT_SECURE_NO_DEPRECATE /I$(LUA_INCLUDE) /Ishapelib
+OBJ = shapelib.obj
+DLLNAME = lshapelib.dll
+
+all: $(DLLNAME)
+
+shapelib.obj: src/shapelib.c
+	$(CC) $(CFLAGS) /c src/shapelib.c
+
+$(DLLNAME): $(OBJ)
+	link /nologo /dll /out:$(DLLNAME) $(OBJ) $(LUA_LIB) shapelib/shapelib.lib

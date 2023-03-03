@@ -4,7 +4,7 @@ LIBS = -llua5.1 -lshp
 CFLAGS = -std=gnu99 -fpic
 OBJS = shapelib.o
 BINDIR = ..
-TARGET = shapelib.so
+TARGET = lshapelib.so
 
 all: shapelib dbflib 
 

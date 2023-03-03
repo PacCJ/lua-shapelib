@@ -214,7 +214,7 @@ static luaL_Reg shapelib_shpm[] = {
     {0, 0} 
 };
 
-int luaopen_shapelib(lua_State *ls)
+__declspec(dllexport) int luaopen_lshapelib(lua_State *ls)
 {
     luaL_newmetatable(ls, "shapelib.shphandle");
     luaL_register(ls, 0, shapelib_shpm);
